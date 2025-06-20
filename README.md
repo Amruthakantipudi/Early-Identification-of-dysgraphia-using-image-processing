@@ -1,92 +1,91 @@
 # Early-Identification-of-dysgraphia-using-image-processing
 
-📌 Project Description
-Dysgraphia is a neurological learning disability that affects handwriting and fine motor skills. Early detection is crucial for providing support to affected individuals.
+# 📌 Project Description
+* Dysgraphia is a neurological learning disability that affects handwriting and fine motor skills. Early detection is crucial for providing support to affected individuals.
 
-This project automates the classification of handwriting samples into:
+* This project automates the classification of handwriting samples into:
 
- Normal (Label: 0)
+ * Normal (Label: 0)
 
-Dysgraphia (Reversal) (Label: 1)
+* Dysgraphia (Reversal) (Label: 1)
 
-The model is trained using extracted image features and predicts whether a handwriting sample shows signs of dysgraphia.
+* The model is trained using extracted image features and predicts whether a handwriting sample shows signs of dysgraphia.
 
-📁 Dataset Structure
-Your dataset should consist of images organized into two folders:
-/Normal       → Contains normal handwriting samples
-/Reversal     → Contains samples with reversal errors (Dysgraphia indicator)
-Each folder can contain subfolders or be a direct collection of .png, .jpg, etc.
+# 📁 Dataset Structure
+* Dataset  consist of images organized into two folders:
+* /Normal       → Contains normal handwriting samples
+* /Reversal     → Contains samples with reversal errors (Dysgraphia indicator)
+* Each folder can contain subfolders or be a direct collection of .png, .jpg, etc.
 
-🧪 Features Extracted from Images
-For each image:
+# 🧪 Features Extracted from Images
+* For each image:
 
-Mean intensity – Average pixel brightness (grayscale)
+* Mean intensity – Average pixel brightness (grayscale)
 
-Standard deviation – Contrast level
+*  deviation – Contrast level
 
-Edge count – Number of detected edges (Canny edge detection)
+* Edge count – Number of detected edges (Canny edge detection)
 
-These features are used to train the AdaBoost classifier.
+* These features are used to train the AdaBoost classifier.
 
-🛠️ Technologies Used
-Python 3.x
+# 🛠️ Technologies Used
+* Python 3.x
 
-OpenCV
+* OpenCV
 
-NumPy
+* NumPy
 
-Scikit-learn (AdaBoostClassifier)
+* Scikit-learn (AdaBoostClassifier)
 
-Matplotlib
+* Matplotlib
 
-Joblib (for model saving/loading)
+* Joblib (for model saving/loading)
 
-Google Colab or Jupyter (recommended)
+* Google Colab 
 
-🚀 How to Run
+# 🚀 How to Run
+
 1. Model Training
-Modify the paths to your dataset in the script.
+* Modify the paths to your dataset in the script.
 
-Run the script to:
+* Run the script to:
 
-Extract features
+* Extract features
 
-Train AdaBoost classifier
+* Train AdaBoost classifier
 
-Display accuracy and confusion matrix
+* Display accuracy and confusion matrix
 
-Save the trained model as .pkl
+* Save the trained model as .pkl
 
 2. Testing on a New Image
-Load the saved model
+* Load the saved model
 
-Upload a handwriting image sample
+* Upload a handwriting image sample
 
-Extract features and make prediction
+* Extract features and make prediction
 
-Display the prediction result with the image
+* Display the prediction result with the image
 
-📊 Output Example
-Training accuracy printed
+# 📊 Output Example
+* Training accuracy printed
 
-Confusion matrix visualized
+* Confusion matrix visualized
 
-Bar chart for model accuracy
+* Bar chart for model accuracy
 
-Image preview with title: Predicted: Normal or Predicted: Dysgraphia
+* Image preview with title: Predicted: Normal or Predicted: Dysgraphia
 
-💡 Use Cases and Benefits
-Early screening tool in schools or clinics
+# 💡 Use Cases and Benefits
+* Early screening tool in schools or clinics
 
-Can be used in mobile apps for parental assessment
+* Can be used in mobile apps for parental assessment
 
-Promotes awareness and early intervention for learning disabilities
+* Promotes awareness and early intervention for learning disabilities
 
-Valuable for education researchers and special educators
+* Valuable for education researchers and special educators
 
-✅ Future Improvements
-1.Use deep learning models (e.g., CNNs) for better accuracy
-
-2.Expand dataset for generalization
-
-3.Improve feature extraction (slant, spacing, pressure analysis)
+# ✅ Future Improvements
+* Use deep learning models for better accuracy
+* Expand dataset for generalization
+* Improve feature extraction (slant, spacing, pressure analysis)
